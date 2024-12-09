@@ -2,7 +2,7 @@ name: Update trending subreddits
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '30 */12 * * *'
   workflow_dispatch:
 
 permissions:
