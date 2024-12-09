@@ -6,7 +6,8 @@ urls=(
   "https://gummysearch.com/page-data/tools/top-subreddits/size-huge/page-data.json"
 )
 
-output_file="gummy-growth-daily.txt"
+output_dir="files"
+output_file="$output_dir/gummy-growth-daily.txt"
 temp_file="temp-gummy-growth-daily.txt"
 
 # Delete the temporary file if it exists
