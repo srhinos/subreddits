@@ -5,7 +5,6 @@ from typing import List
 FILENAME = 'popular.txt'
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
 MIN_LIMIT = 1000
-MAX_LIMIT = 100000
 
 def generate_popular_subreddits() -> None:
     # Replace these with your own credentials
@@ -18,7 +17,7 @@ def generate_popular_subreddits() -> None:
                          user_agent=USER_AGENT)
 
     # Get popular subreddits
-    popular_subreddits: List[praw.models.Subreddit] = list(reddit.subreddits.popular(limit=MAX_LIMIT))
+    popular_subreddits: List[praw.models.Subreddit] = list(reddit.subreddits.popular(limit=None, params={'show': 'all'}))
 
     # Sanity check
     if len(popular_subreddits) < MIN_LIMIT:
