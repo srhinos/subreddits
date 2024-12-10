@@ -2,8 +2,6 @@ import os
 import praw
 from typing import List
 
-OUTPUT_DIR = 'files'
-FILENAME = os.path.join(OUTPUT_DIR, 'popular.txt')
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36'
 MIN_LIMIT = 1000
 
@@ -24,10 +22,8 @@ def generate_popular_subreddits() -> None:
     if len(popular_subreddits) < MIN_LIMIT:
         raise ValueError(f'Warning: Only {len(popular_subreddits)} subreddits found, expected more than {MIN_LIMIT}.')
 
-    # Write to file
-    with open(FILENAME, 'w') as file:
-        for subreddit in popular_subreddits:
-            file.write(f'{subreddit.display_name}\n')
+    for subreddit in popular_subreddits:
+        print(subreddit.display_name)
 
 if __name__ == '__main__':
     generate_popular_subreddits()

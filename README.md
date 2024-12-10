@@ -1,6 +1,6 @@
 # Subreddits
 
-## popular.txt ([link](https://jeffreyca.github.io/subreddits/files/popular.txt))
+## popular.txt ([link](https://jeffreyca.github.io/subreddits/popular.txt))
 List of popular subreddits retrieved using [Reddit's popular subreddits API](https://www.reddit.com/dev/api/#GET_subreddits_{where}). Updated daily.
 
 To generate the list yourself, you'll need a Reddit app client ID and secret, which you can get by following these steps:
@@ -29,5 +29,11 @@ To generate the list yourself, you'll need a Reddit app client ID and secret, wh
 3. Set the `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` environment variables
 4. `python gen_popular.py`
 
-## trending-original.txt ([link](https://jeffreyca.github.io/subreddits/files/trending-original.txt))
+## trending-apollo.txt ([link](https://jeffreyca.github.io/subreddits/trending-apollo.txt))
 Original list of trending subreddits used by Apollo iOS app, extracted from `trending-subreddits.plist`. Last updated 2023-09-09.
+
+## trending-reddstats-weekly.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-weekly.txt))
+List of trending subreddits, sourced from https://reddstats.com.
+
+* Growth period: weekly
+* Subscribers: 10001-50000, 50001-100000, 100001-1000000
