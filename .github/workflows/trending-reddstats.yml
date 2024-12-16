@@ -1,15 +1,15 @@
-name: Update popular subreddits
+name: Update trending subreddits
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '30 */12 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-popular-subreddits:
+  update-trending-subreddits:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,20 +27,20 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install -r requirements.txt
 
-    - name: Run gen_popular.py
-      run: python scripts/gen_popular.py > popular.txt
-      env:
-        REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-        REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+    - name: Run gen_trending_reddstats.py daily
+      run: python scripts/gen_trending_reddstats.py daily > trending-reddstats-daily.txt
+
+    - name: Run gen_trending_reddstats.py weekly
+      run: python scripts/gen_trending_reddstats.py weekly > trending-reddstats-weekly.txt
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add popular.txt
+        git add trending-reddstats-daily.txt trending-reddstats-weekly.txt
         if git diff-index --quiet HEAD --; then
           echo "No changes to commit"
         else
-          git commit -m "Popular subreddits weekly update [$(date +'%Y-%m-%d')]"
+          git commit -m "Trending subreddit daily update [$(date +'%Y-%m-%d')]"
           git push
         fi
