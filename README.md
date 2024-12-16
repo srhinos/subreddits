@@ -15,19 +15,21 @@ To generate the list yourself, you'll need a Reddit app client ID and secret, wh
 1. Install Python 3
 2. `pip install -r requirements.txt`
 3. Set the `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` environment variables
-4. `python gen_popular.py`
+4. `python scripts/gen_popular.py`
 
-## trending-reddstats-daily.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-daily.txt))
+## trending-reddstats-daily.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-daily.txt)), trending-reddstats-weekly.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-weekly.txt))
 List of trending subreddits, sourced from [reddstats.com](https://reddstats.com/ranking/relative?over18=False&period=daily&subscriber_classification=50001-100000). Updated daily.
 
-* Growth period: daily
+* Growth period: daily, weekly
 * Subscribers: 10001-50000, 50001-100000, 100001-1000000
 
-## trending-reddstats-weekly.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-weekly.txt))
-List of trending subreddits, sourced from [reddstats.com](https://reddstats.com/ranking/relative?over18=False&period=weekly&subscriber_classification=50001-100000). Updated daily.
+### Generate using GitHub Actions
+The GitHub Action "Update trending subreddits" is configured to run twice a day, but you can also manually trigger it.
 
-* Growth period: weekly
-* Subscribers: 10001-50000, 50001-100000, 100001-1000000
+### Generate from local machine
+1. Install Python 3
+2. `pip install -r requirements.txt`
+3. `python scripts/gen_trending_reddstats.py <daily or weekly>`
 
 ## trending-apollo.txt ([link](https://jeffreyca.github.io/subreddits/trending-apollo.txt))
 Original list of trending subreddits used by Apollo iOS app, extracted from `trending-subreddits.plist`. Last updated 2023-09-09.
