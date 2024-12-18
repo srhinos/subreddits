@@ -17,6 +17,18 @@ To generate the list yourself, you'll need a Reddit app client ID and secret, wh
 3. Set the `REDDIT_CLIENT_ID` and `REDDIT_CLIENT_SECRET` environment variables
 4. `python scripts/gen_popular.py`
 
+## trending-gummy-daily.txt ([link](https://jeffreyca.github.io/subreddits/trending-gummy-daily.txt)), trending-gummy-weekly.txt ([link](https://jeffreyca.github.io/subreddits/trending-gummy-weekly.txt))
+List of trending subreddits, sourced from [gummysearch.com](https://gummysearch.com/tools/top-subreddits/). Updated daily.
+
+* Growth period: daily, weekly
+* Size: large, huge, massive
+
+### Generate using GitHub Actions
+The GitHub Action "Update trending subreddits (gummysearch)" is configured to run twice a day, but you can also manually trigger it.
+
+### Generate from local machine
+3. `./scripts/gen_trending_gummy.sh <daily or weekly>`
+
 ## trending-reddstats-daily.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-daily.txt)), trending-reddstats-weekly.txt ([link](https://jeffreyca.github.io/subreddits/trending-reddstats-weekly.txt))
 List of trending subreddits, sourced from [reddstats.com](https://reddstats.com/ranking/relative?over18=False&period=daily&subscriber_classification=50001-100000). Updated daily.
 
@@ -24,7 +36,7 @@ List of trending subreddits, sourced from [reddstats.com](https://reddstats.com/
 * Subscribers: 10001-50000, 50001-100000, 100001-1000000
 
 ### Generate using GitHub Actions
-The GitHub Action "Update trending subreddits" is configured to run twice a day, but you can also manually trigger it.
+The GitHub Action "Update trending subreddits (reddstats)" is configured to run twice a day, but you can also manually trigger it.
 
 ### Generate from local machine
 1. Install Python 3
