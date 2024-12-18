@@ -1,4 +1,4 @@
-name: Update trending subreddits
+name: Update trending subreddits (reddstats)
 
 on:
   schedule:
@@ -32,6 +32,13 @@ jobs:
 
     - name: Run gen_trending_reddstats.py weekly
       run: python scripts/gen_trending_reddstats.py weekly > trending-reddstats-weekly.txt
+
+    - name: Abort if empty
+      run: |
+        if [ ! -s trending-reddstats-daily.txt ] || [ ! -s trending-reddstats-weekly.txt ]; then
+          echo "One or both files are empty"
+          exit 1
+        fi
 
     - name: Commit and push changes
       run: |

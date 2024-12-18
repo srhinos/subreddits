@@ -5,7 +5,7 @@ import requests
 BASE_URL = 'https://reddstats.com/ranking/relative'
 PERIODS = ['daily', 'weekly']
 SUBSCRIBER_BINS = ['10001-50000', '50001-100000', '100001-1000000']
-LIMIT_PER_BIN = 5
+LIMIT_PER_BIN = 7
 
 def generate_trending(period: str) -> None:
     if period not in PERIODS:
