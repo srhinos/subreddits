@@ -2513,7 +2513,6 @@ paypal
 LearnerDriverUK
 InteriorDesign
 MiniPCs
-DarkinFolk
 Alienware
 ManyBaggers
 TOTK
@@ -2808,7 +2807,6 @@ animation
 koreatravel
 translator
 StartUpIndia
-FaceRatings
 Ravendawn
 learnjava
 newyorkcity
@@ -4386,3 +4384,6 @@ openSUSE
 NatureofPredators
 lesserafim
 riograndedosul
+Jeep
+NoPixel
+pirataria
