@@ -9,7 +9,7 @@ To generate the list yourself, you'll need a Reddit app client ID and secret, wh
 1. Set the following repository secrets ([guide](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)) to the values from previous step:
     - `REDDIT_CLIENT_ID`
     - `REDDIT_CLIENT_SECRET`
-2. The GitHub Action "Update popular subreddits" is configured to run at 00:00 UTC on Sundays, but you can also manually trigger it.
+2. The GitHub Action "Update popular subreddits" is configured to run at 00:00 UTC on Sundays and Wednesdays, but you can also manually trigger it.
 
 ### Generate from local machine
 1. Install Python 3
