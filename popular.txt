@@ -2984,7 +2984,6 @@ japanpeopletwitter
 spiderman2
 churning
 iOSProgramming
-MxRThumbnails
 F1Game
 OttawaSenators
 MinecraftHelp
@@ -4382,3 +4381,5 @@ riograndedosul
 Jeep
 NoPixel
 pirataria
+Mountaineering
+SFGiants
