@@ -56,7 +56,6 @@ anime
 wow
 DnD
 technology
-WhitePeopleTwitter
 EscapefromTarkov
 unpopularopinion
 popculturechat
@@ -4384,3 +4383,4 @@ pirataria
 Mountaineering
 SFGiants
 Acura
+PHJobs
