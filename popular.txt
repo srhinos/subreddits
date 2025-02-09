@@ -3380,7 +3380,6 @@ powerlifting
 bokunokokoro
 roosterteeth
 ender3v2
-FunnyandSad
 k12sysadmin
 whatsthisrock
 deathgrips
@@ -3583,7 +3582,6 @@ GeForceExperience
 cheatengine
 barista
 Haircare
-JanitorAI_Official
 yeat_
 OmniscientReader
 AnaloguePocket
