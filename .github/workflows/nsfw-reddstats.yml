@@ -1,4 +1,4 @@
-name: Update trending subreddits (reddstats)
+name: Update nsfw subreddits (reddstats)
 
 on:
   schedule:
