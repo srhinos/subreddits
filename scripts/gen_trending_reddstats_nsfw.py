@@ -18,7 +18,7 @@ async def fetch_and_extract(
     client: httpx.AsyncClient, period: str, counts: str
 ) -> set[str]:
     url = f"{BASE_URL}?over18=True&period={period}&subscriber_classification={counts}"
-    resp = await client.get(url, timeout=httpx.Timeout(30.0))
+    resp = await client.get(url, timeout=httpx.Timeout(60.0))
     soup = BeautifulSoup(resp.text, "html.parser")
     elements = soup.select('div.item a[href^="/subreddit/"]')
     return set(el.text.strip() for el in elements[:LIMIT_PER_BIN])
