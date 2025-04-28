@@ -1,8 +1,6 @@
 name: Update trending subreddits (reddstats)
 
 on:
-  schedule:
-    - cron: '30 */12 * * *'
   workflow_dispatch:
 
 permissions:
